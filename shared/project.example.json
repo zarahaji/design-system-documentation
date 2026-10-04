@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "foundations": [],
+  "components": [],
+  "interviewReferences": [],
+  "primaryLanguage": "fa-IR",
+  "bilingualPerComponent": false,
+  "persianTerminology": {},
+  "visualKit": {
+    "pageUrl": null,
+    "componentSetUrl": null
+  },
+  "outputDirectory": "docs/components"
+}

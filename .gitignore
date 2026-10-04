@@ -1,0 +1,10 @@
+.DS_Store
+.env
+.env.*
+component-docs.json
+docs/components/
+eval-artifacts/
+*.log
+__pycache__/
+*.py[cod]
+.venv/
