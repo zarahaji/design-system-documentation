@@ -1,107 +1,115 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1040" viewBox="0 0 1200 1040" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1248" viewBox="0 0 1200 1248" role="img" aria-labelledby="title desc">
   <title id="title">Neutral component documentation visual kit overview</title>
   <desc id="desc">Eight editable visual template families shown with neutral placeholder components.</desc>
-  <rect width="1200" height="1040" fill="#FFFFFF"/>
+  <rect width="1200" height="1248" fill="#FFFFFF" />
   <text x="40" y="52" fill="#202124" font-family="Noto Sans, sans-serif" font-size="28" font-weight="700">Component Documentation Kit</text>
   <text x="40" y="82" fill="#667085" font-family="Noto Sans, sans-serif" font-size="15">Neutral blueprint · 8 families · source components replace placeholders</text>
-
   <g font-family="Noto Sans, sans-serif">
     <g transform="translate(40 112)">
-      <rect width="540" height="210" rx="12" fill="#FFFFFF" stroke="#D0D5DD"/>
-      <text x="18" y="31" fill="#202124" font-size="18" font-weight="700">Anatomy</text>
-      <rect x="18" y="47" width="504" height="135" rx="8" fill="#F3F4F6"/>
-      <rect x="202" y="85" width="136" height="58" rx="12" fill="#FFFFFF" stroke="#98A2B3"/>
-      <rect x="220" y="103" width="28" height="22" rx="5" fill="#D0D5DD"/>
-      <rect x="261" y="106" width="59" height="15" rx="4" fill="#D0D5DD"/>
-      <rect x="202" y="85" width="136" height="58" rx="12" fill="none" stroke="#D92D20" stroke-width="2"/>
-      <path d="M191 114H145M349 114H395" fill="none" stroke="#D92D20" stroke-width="2"/>
-      <text x="75" y="119" fill="#D92D20" font-size="13">Part</text>
-      <text x="405" y="119" fill="#D92D20" font-size="13">Content</text>
-      <text x="18" y="202" fill="#667085" font-size="13">Named parts with exact native geometry</text>
+      <rect width="540" height="256" rx="12" fill="#FFFFFF" stroke="#D0D5DD" />
+      <text x="24" y="27" fill="#202124" font-size="18" font-weight="700" dominant-baseline="text-before-edge">Anatomy</text>
+      <g transform="translate(0 17)">
+        <rect x="24" y="47" width="492" height="135" rx="8" fill="#F3F4F6" />
+        <rect x="202" y="85" width="136" height="58" rx="12" fill="#FFFFFF" stroke="#98A2B3" />
+        <rect x="220" y="103" width="28" height="22" rx="5" fill="#D0D5DD" />
+        <rect x="261" y="106" width="59" height="15" rx="4" fill="#D0D5DD" />
+        <rect x="202" y="85" width="136" height="58" rx="12" fill="none" stroke="#D92D20" stroke-width="2" />
+        <path d="M191 114H145M349 114H395" fill="none" stroke="#D92D20" stroke-width="2" />
+        <text x="75" y="119" fill="#D92D20" font-size="13">Part</text>
+        <text x="405" y="119" fill="#D92D20" font-size="13">Content</text>
+      </g>
+      <text x="24" y="223" fill="#667085" font-size="13" dominant-baseline="text-before-edge">Named parts with exact native geometry</text>
     </g>
-
     <g transform="translate(620 112)">
-      <rect width="540" height="210" rx="12" fill="#FFFFFF" stroke="#D0D5DD"/>
-      <text x="18" y="31" fill="#202124" font-size="18" font-weight="700">Variants</text>
-      <rect x="18" y="47" width="504" height="135" rx="8" fill="#F3F4F6"/>
-      <rect x="75" y="83" width="105" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3"/>
-      <rect x="218" y="83" width="105" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3"/>
-      <rect x="361" y="83" width="105" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3"/>
-      <text x="104" y="160" fill="#202124" font-size="13">Value A</text>
-      <text x="247" y="160" fill="#202124" font-size="13">Value B</text>
-      <text x="390" y="160" fill="#202124" font-size="13">Value C</text>
-      <text x="18" y="202" fill="#667085" font-size="13">Exact authored values beneath specimens</text>
+      <rect width="540" height="256" rx="12" fill="#FFFFFF" stroke="#D0D5DD" />
+      <text x="24" y="27" fill="#202124" font-size="18" font-weight="700" dominant-baseline="text-before-edge">Variants</text>
+      <g transform="translate(0 17)">
+        <rect x="24" y="47" width="492" height="135" rx="8" fill="#F3F4F6" />
+        <rect x="75" y="83" width="105" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3" />
+        <rect x="218" y="83" width="105" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3" />
+        <rect x="361" y="83" width="105" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3" />
+        <text x="104" y="160" fill="#202124" font-size="13">Value A</text>
+        <text x="247" y="160" fill="#202124" font-size="13">Value B</text>
+        <text x="390" y="160" fill="#202124" font-size="13">Value C</text>
+      </g>
+      <text x="24" y="223" fill="#667085" font-size="13" dominant-baseline="text-before-edge">Exact authored values beneath specimens</text>
     </g>
-
-    <g transform="translate(40 344)">
-      <rect width="540" height="210" rx="12" fill="#FFFFFF" stroke="#D0D5DD"/>
-      <text x="18" y="31" fill="#202124" font-size="18" font-weight="700">States</text>
-      <rect x="18" y="47" width="504" height="135" rx="8" fill="#F3F4F6"/>
-      <rect x="98" y="84" width="140" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3"/>
-      <rect x="302" y="84" width="140" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3" opacity="0.5"/>
-      <text x="139" y="161" fill="#202124" font-size="13">State A</text>
-      <text x="343" y="161" fill="#202124" font-size="13">State B</text>
-      <text x="18" y="202" fill="#667085" font-size="13">Actual supported states, no inferred behavior</text>
+    <g transform="translate(40 392)">
+      <rect width="540" height="256" rx="12" fill="#FFFFFF" stroke="#D0D5DD" />
+      <text x="24" y="27" fill="#202124" font-size="18" font-weight="700" dominant-baseline="text-before-edge">States</text>
+      <g transform="translate(0 17)">
+        <rect x="24" y="47" width="492" height="135" rx="8" fill="#F3F4F6" />
+        <rect x="98" y="84" width="140" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3" />
+        <rect x="302" y="84" width="140" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3" opacity="0.5" />
+        <text x="139" y="161" fill="#202124" font-size="13">State A</text>
+        <text x="343" y="161" fill="#202124" font-size="13">State B</text>
+      </g>
+      <text x="24" y="223" fill="#667085" font-size="13" dominant-baseline="text-before-edge">Actual supported states, no inferred behavior</text>
     </g>
-
-    <g transform="translate(620 344)">
-      <rect width="540" height="210" rx="12" fill="#FFFFFF" stroke="#D0D5DD"/>
-      <text x="18" y="31" fill="#202124" font-size="18" font-weight="700">Rule Comparison</text>
-      <rect x="18" y="47" width="239" height="135" rx="8" fill="#F3F4F6"/>
-      <rect x="283" y="47" width="239" height="135" rx="8" fill="#F3F4F6"/>
-      <rect x="72" y="86" width="132" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3"/>
-      <rect x="337" y="86" width="132" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3"/>
-      <path d="m122 112 9 9 17-20" fill="none" stroke="#079455" stroke-width="3"/>
-      <path d="m392 103 17 17m0-17-17 17" fill="none" stroke="#D92D20" stroke-width="3"/>
-      <text x="18" y="202" fill="#667085" font-size="13">One confirmed rule, one controlled difference</text>
+    <g transform="translate(620 392)">
+      <rect width="540" height="256" rx="12" fill="#FFFFFF" stroke="#D0D5DD" />
+      <text x="24" y="27" fill="#202124" font-size="18" font-weight="700" dominant-baseline="text-before-edge">Rule Comparison</text>
+      <g transform="translate(0 17)">
+        <rect x="24" y="47" width="234" height="135" rx="8" fill="#F3F4F6" />
+        <rect x="282" y="47" width="234" height="135" rx="8" fill="#F3F4F6" />
+        <rect x="72" y="86" width="132" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3" />
+        <rect x="337" y="86" width="132" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3" />
+        <path d="m122 112 9 9 17-20" fill="none" stroke="#079455" stroke-width="3" />
+        <path d="m392 103 17 17m0-17-17 17" fill="none" stroke="#D92D20" stroke-width="3" />
+      </g>
+      <text x="24" y="223" fill="#667085" font-size="13" dominant-baseline="text-before-edge">One confirmed rule, one controlled difference</text>
     </g>
-
-    <g transform="translate(40 576)">
-      <rect width="540" height="210" rx="12" fill="#FFFFFF" stroke="#D0D5DD"/>
-      <text x="18" y="31" fill="#202124" font-size="18" font-weight="700">Responsive Comparison</text>
-      <rect x="18" y="47" width="239" height="135" rx="8" fill="#F3F4F6"/>
-      <rect x="283" y="47" width="239" height="135" rx="8" fill="#F3F4F6"/>
-      <rect x="55" y="84" width="165" height="55" rx="8" fill="#FFFFFF" stroke="#98A2B3"/>
-      <rect x="346" y="84" width="113" height="55" rx="8" fill="#FFFFFF" stroke="#98A2B3"/>
-      <path d="M55 151H220m-165-6v12m165-12v12M346 151h113m-113-6v12m113-12v12" stroke="#D92D20" stroke-width="2" fill="none"/>
-      <text x="18" y="202" fill="#667085" font-size="13">Confirmed change across containers or direction</text>
+    <g transform="translate(40 672)">
+      <rect width="540" height="256" rx="12" fill="#FFFFFF" stroke="#D0D5DD" />
+      <text x="24" y="27" fill="#202124" font-size="18" font-weight="700" dominant-baseline="text-before-edge">Responsive Comparison</text>
+      <g transform="translate(0 17)">
+        <rect x="24" y="47" width="234" height="135" rx="8" fill="#F3F4F6" />
+        <rect x="282" y="47" width="234" height="135" rx="8" fill="#F3F4F6" />
+        <rect x="55" y="84" width="165" height="55" rx="8" fill="#FFFFFF" stroke="#98A2B3" />
+        <rect x="346" y="84" width="113" height="55" rx="8" fill="#FFFFFF" stroke="#98A2B3" />
+        <path d="M55 151H220m-165-6v12m165-12v12M346 151h113m-113-6v12m113-12v12" stroke="#D92D20" stroke-width="2" fill="none" />
+      </g>
+      <text x="24" y="223" fill="#667085" font-size="13" dominant-baseline="text-before-edge">Confirmed change across containers or direction</text>
     </g>
-
-    <g transform="translate(620 576)">
-      <rect width="540" height="210" rx="12" fill="#FFFFFF" stroke="#D0D5DD"/>
-      <text x="18" y="31" fill="#202124" font-size="18" font-weight="700">Truncation</text>
-      <rect x="18" y="47" width="239" height="135" rx="8" fill="#F3F4F6"/>
-      <rect x="283" y="47" width="239" height="135" rx="8" fill="#F3F4F6"/>
-      <rect x="55" y="84" width="165" height="55" rx="8" fill="#FFFFFF" stroke="#98A2B3"/>
-      <rect x="320" y="84" width="165" height="55" rx="8" fill="#FFFFFF" stroke="#98A2B3"/>
-      <rect x="69" y="102" width="105" height="8" rx="4" fill="#98A2B3"/>
-      <rect x="334" y="99" width="130" height="8" rx="4" fill="#98A2B3"/>
-      <rect x="334" y="115" width="92" height="8" rx="4" fill="#98A2B3"/>
-      <text x="18" y="202" fill="#667085" font-size="13">Confirmed truncation at a constrained width</text>
+    <g transform="translate(620 672)">
+      <rect width="540" height="256" rx="12" fill="#FFFFFF" stroke="#D0D5DD" />
+      <text x="24" y="27" fill="#202124" font-size="18" font-weight="700" dominant-baseline="text-before-edge">Truncation</text>
+      <g transform="translate(0 17)">
+        <rect x="24" y="47" width="234" height="135" rx="8" fill="#F3F4F6" />
+        <rect x="282" y="47" width="234" height="135" rx="8" fill="#F3F4F6" />
+        <rect x="55" y="84" width="165" height="55" rx="8" fill="#FFFFFF" stroke="#98A2B3" />
+        <rect x="320" y="84" width="165" height="55" rx="8" fill="#FFFFFF" stroke="#98A2B3" />
+        <rect x="69" y="102" width="105" height="8" rx="4" fill="#98A2B3" />
+        <rect x="334" y="99" width="130" height="8" rx="4" fill="#98A2B3" />
+        <rect x="334" y="115" width="92" height="8" rx="4" fill="#98A2B3" />
+      </g>
+      <text x="24" y="223" fill="#667085" font-size="13" dominant-baseline="text-before-edge">Confirmed truncation at a constrained width</text>
     </g>
-
-    <g transform="translate(40 808)">
-      <rect width="540" height="210" rx="12" fill="#FFFFFF" stroke="#D0D5DD"/>
-      <text x="18" y="31" fill="#202124" font-size="18" font-weight="700">Behavior</text>
-      <rect x="18" y="47" width="504" height="135" rx="8" fill="#F3F4F6"/>
-      <rect x="62" y="85" width="110" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3"/>
-      <rect x="216" y="85" width="110" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3"/>
-      <rect x="370" y="85" width="110" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3"/>
-      <path d="M180 112h27m-7-6 7 6-7 6M334 112h27m-7-6 7 6-7 6" fill="none" stroke="#667085" stroke-width="2"/>
-      <text x="18" y="202" fill="#667085" font-size="13">Confirmed event and result sequence</text>
+    <g transform="translate(40 952)">
+      <rect width="540" height="256" rx="12" fill="#FFFFFF" stroke="#D0D5DD" />
+      <text x="24" y="27" fill="#202124" font-size="18" font-weight="700" dominant-baseline="text-before-edge">Behavior</text>
+      <g transform="translate(0 17)">
+        <rect x="24" y="47" width="492" height="135" rx="8" fill="#F3F4F6" />
+        <rect x="62" y="85" width="110" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3" />
+        <rect x="216" y="85" width="110" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3" />
+        <rect x="370" y="85" width="110" height="55" rx="12" fill="#FFFFFF" stroke="#98A2B3" />
+        <path d="M180 112h27m-7-6 7 6-7 6M334 112h27m-7-6 7 6-7 6" fill="none" stroke="#667085" stroke-width="2" />
+      </g>
+      <text x="24" y="223" fill="#667085" font-size="13" dominant-baseline="text-before-edge">Confirmed event and result sequence</text>
     </g>
-
-    <g transform="translate(620 808)">
-      <rect width="540" height="210" rx="12" fill="#FFFFFF" stroke="#D0D5DD"/>
-      <text x="18" y="31" fill="#202124" font-size="18" font-weight="700">Product Example</text>
-      <rect x="18" y="47" width="504" height="135" rx="8" fill="#F3F4F6"/>
-      <rect x="138" y="63" width="264" height="103" rx="7" fill="#FFFFFF" stroke="#98A2B3"/>
-      <rect x="138" y="63" width="264" height="17" rx="7" fill="#D0D5DD"/>
-      <rect x="155" y="95" width="84" height="54" rx="4" fill="#E4E7EC"/>
-      <rect x="253" y="95" width="132" height="9" rx="4" fill="#98A2B3"/>
-      <rect x="253" y="114" width="103" height="9" rx="4" fill="#D0D5DD"/>
-      <rect x="253" y="133" width="78" height="9" rx="4" fill="#D0D5DD"/>
-      <text x="18" y="202" fill="#667085" font-size="13">Authorized product context and placement</text>
+    <g transform="translate(620 952)">
+      <rect width="540" height="256" rx="12" fill="#FFFFFF" stroke="#D0D5DD" />
+      <text x="24" y="27" fill="#202124" font-size="18" font-weight="700" dominant-baseline="text-before-edge">Product Example</text>
+      <g transform="translate(0 17)">
+        <rect x="24" y="47" width="492" height="135" rx="8" fill="#F3F4F6" />
+        <rect x="138" y="63" width="264" height="103" rx="7" fill="#FFFFFF" stroke="#98A2B3" />
+        <rect x="138" y="63" width="264" height="17" rx="7" fill="#D0D5DD" />
+        <rect x="155" y="95" width="84" height="54" rx="4" fill="#E4E7EC" />
+        <rect x="253" y="95" width="132" height="9" rx="4" fill="#98A2B3" />
+        <rect x="253" y="114" width="103" height="9" rx="4" fill="#D0D5DD" />
+        <rect x="253" y="133" width="78" height="9" rx="4" fill="#D0D5DD" />
+      </g>
+      <text x="24" y="223" fill="#667085" font-size="13" dominant-baseline="text-before-edge">Authorized product context and placement</text>
     </g>
   </g>
 </svg>
