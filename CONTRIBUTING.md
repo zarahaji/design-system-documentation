@@ -30,3 +30,8 @@ See [testing and limitations](docs/testing.md). Keep raw model traces, private p
 - Check linked Figma files' permissions and distribution rights separately. A valid URL does not establish access or permission to redistribute.
 
 Publication checks are maintenance work, not steps in the component-documentation workflow.
+
+
+## Synchronize kit-affecting changes
+
+A change affecting the Component Documentation Kit is complete only when the instructions, all affected live FA/EN masters, and relevant published examples agree. Re-render affected outputs, verify actual geometry in a fresh read, and update reviewed image hashes if their files change. Package tests alone do not verify the Figma kit. Report inaccessible or unsynchronized destinations explicitly. Keep the standard stage height in the shared Figma token `size/stage-height` (320 px), rather than independently resizing variants.
