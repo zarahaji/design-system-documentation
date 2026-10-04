@@ -37,7 +37,7 @@ For complete coverage, inventory all actual axes and values, including relevant 
 
 ## 4. Build one figure, then repeat
 
-Follow [build and verification procedures](references/build-and-verify.md). Use editable kit templates and actual native instances. Apply the kit's colors, layout, and fonts only to documentation elements.
+Follow [build and verification procedures](references/build-and-verify.md). Use editable kit templates and actual native instances. Apply the kit's colors, layout, and fonts only to documentation elements. All kit-owned colors must bind to Figma color tokens. Center the complete visible composition, including every callout and auxiliary asset, with equal padding on all four sides of the gray stage; follow the kit specification’s geometry and post-export checks.
 
 For Anatomy, read and execute [callout placement](references/anatomy-callouts.md) before positioning labels. Every title stays outside the whole native component, with a 12 px text-to-leader gap. Fit text boxes, select unobstructed exit sides, calculate comparable leader spans and exterior clearance, then verify the measured result after export. Never copy an earlier example's coordinates as a placement rule.
 

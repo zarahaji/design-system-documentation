@@ -41,3 +41,22 @@ These defaults are for documentation chrome. Inspect current Figma geometry and 
 The kit page should contain a short usage note, nine template families in FA and EN, a specimen placeholder in each, and a small neutral component example made only for demonstrating the kit. It must not claim any example behavior as the user's product policy. Share the Figma file or duplicate link according to the user's chosen access settings; a page URL alone inherits its parent file's permissions.
 
 For the step-by-step build order, family-specific checks, and export verification procedure, read [build and verify](../component-doc-visuals/references/build-and-verify.md).
+
+
+## Centered compositions and equal gray-stage padding
+
+This rule applies to every template, with or without callouts or additional assets. Measure the union of all visible in-stage content: native specimens, separate backings, labels, leaders, measurement bands and values, icons, touch indicators, auxiliary assets, and visible stroke/shadow extents. Exclude the gray stage itself and captions outside it. A composition wrapper counts by its visible children, not its empty frame bounds.
+
+Center that whole union in the gray stage and use equal padding on all four sides. Do not center the specimen alone while annotations extend off one side. For union size `(uw, uh)` and shared padding `p`, the stage must be `(uw + 2p, uh + 2p)`. With a fixed stage width `sw`, calculate `p = (sw - uw) / 2`, require at least the configured minimum inset (default 32 px), and set stage height to `uh + 2p`. Translate the complete composition together so its left/top extents are at `(p, p)`. Refit the outside caption and output frame afterward, preserving the output's 40 px outer padding.
+
+If `p` is too small, rearrange labels, wrap or split examples, or use an authorized wider format. Do not enlarge, stretch, or distort native components to consume whitespace. In paired comparisons, each stage must independently satisfy this rule; equal stage heights must not conceal unequal padding. The confirmed placement of a component inside a demonstrated product container stays unchanged: center the entire container and its annotations in the documentation stage, not the product component inside its UI.
+
+After export, read fresh geometry and record the four actual gaps. All must equal `p` within 0.5 logical px rounding. Equal Auto Layout padding values alone do not pass if absolutely positioned overlays, text reflow, or effects make the visible gaps unequal. Repair, export again, and repeat the check.
+
+## Figma color token contract
+
+Every kit-owned color must have a real Figma color-variable binding: fills, strokes, text fills (including mixed ranges), icon shapes, annotation bands, and any colored effects or gradient stops. A matching RGB/hex value or paint style without a variable binding is insufficient. Reuse the semantic variables in the `Documentation Kit` collection; create a clearly named semantic token only for a genuinely missing role. Preserve the native product component's own color bindings; do not retheme product content with documentation tokens.
+
+Current semantic roles: `color/canvas`, `color/stage`, `color/surface`, `color/ink`, `color/annotation`, `color/arrow`, `color/border`, `color/border-subtle`, and `color/success`. White marks inside status icons use `color/surface`. Red gap bands bind `color/annotation` and retain effective opacity `0.12` (use band-frame opacity when variable binding resets paint alpha; keep labels as separate full-opacity siblings); measurement labels use the same token at full opacity. Transparent layers can have no paint; never add a visible fill just to attach a token.
+
+Audit Cover, Templates, and Assets recursively after edits. Inspect binding IDs and resolved colors, not appearance alone, and render the result to catch incorrect alias resolution or black fallbacks. A final audit must report zero unbound kit-owned colors. Editor canvas backgrounds are workspace preferences, not exportable kit artwork.
