@@ -10,5 +10,6 @@
     "pageUrl": null,
     "componentSetUrl": null
   },
-  "outputDirectory": "docs/components"
+  "outputDirectory": "docs/components",
+  "interviewReferencesConfirmed": false
 }

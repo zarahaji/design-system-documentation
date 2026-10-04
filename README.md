@@ -14,14 +14,16 @@ Research, write, illustrate, and assemble design-system component documentation 
 
 Your component sources and confirmed decisions establish the rules. External design systems help identify questions; their policies are never automatically adopted.
 
+Each skill follows numbered steps with explicit inputs, completion checks, and blocked-work handling. A shared claim ledger and figure handoff reduce decisions left implicit during low-reasoning-effort runs. Completed setup is reused; internal checks do not create extra user approval rounds. See the [execution contract](shared/execution-contract.md).
+
 ## Requirements
 
 - Codex with local skill support and access to the project files.
-- Readable component sources: design files, code, or authored specifications.
+- A Figma link to the specific component node, with readable access. Code and authored specifications can supplement that source.
 - For visuals: an available Figma connection capable of inspecting and editing nodes and exporting images, an editable destination, and the required `figma-use` skill. Its prerequisites must also be available for the operations you request. Having a Figma browser tab open does not make these tools available to Codex.
-- For package checks: Python 3.10 or later. The bundled checker and tests use the standard library.
+- For package checks: Python 3.10 or later. The bundled checker and tests use the standard library. The writer also uses a small Python identifier checker when local execution is available; without it, the writer performs and reports a manual comparison.
 
-Text-only writing and Markdown assembly do not require a Figma connection.
+Writing requires access to the linked Figma component. Assembly of already approved text and verified images can run without a Figma connection.
 
 ## Install
 
@@ -41,21 +43,51 @@ Copy [`shared/project.example.json`](shared/project.example.json) to `component-
 
 ## Start with a component
 
-```text
-Use $component-doc-writer to document our Accordion.
-The component source is in source.md. Help me choose the sections first.
-```
+Use these input formats. Reuse links already saved in the project; you do not need to paste them on every follow-up.
 
-The writer first settles the sources, language, optional bilingual output, and interview references. It then shows a section list, investigates the selected sections, and asks only about relevant unknowns. Drafts and working evidence are saved separately.
-
-When you have confirmed text and want illustrations:
+**Written documentation — required: the component’s Figma node link.**
 
 ```text
-Use $component-doc-visuals to illustrate the confirmed Anatomy section.
-Use the native component and the destination linked in component-docs.json.
+Use $component-doc-writer to document this component.
+Figma component: [link to the component node]
+Language: Persian
+Sections: [requested sections, or help me choose]
+Additional specifications or code, if available: [link or file]
 ```
 
-The visual skill asks once about a product-screen reference, preserves native component styling, and checks exported images. It supports Anatomy, Variants, States, Rule Comparison, Responsive Comparison, Truncation, Behavior, and Product Example.
+**Visual documentation — required: the component’s Figma node link and the paragraph to illustrate. A product example is optional.**
+
+```text
+Use $component-doc-visuals to illustrate the following paragraph.
+Figma component: [link to the component node]
+Paragraph to illustrate: [the exact paragraph]
+Product example, if available: [screen link or reference image]
+Documentation kit and editable destination: [links, unless already configured]
+Language: Persian
+```
+
+نمونهٔ پرامپت برای مستند نوشتاری:
+
+```text
+با $component-doc-writer مستند این کامپوننت را به فارسی بنویس.
+لینک کامپوننت در فیگما: [لینک مستقیم کامپوننت]
+بخش‌های موردنیاز: [نام بخش‌ها؛ یا برای انتخاب بخش‌ها راهنمایی کن]
+```
+
+نمونهٔ پرامپت برای مستند تصویری:
+
+```text
+با $component-doc-visuals برای پاراگراف زیر تصویر مستندات بساز.
+لینک کامپوننت در فیگما: [لینک مستقیم کامپوننت]
+پاراگراف موردنظر: [متن دقیق پاراگراف]
+نمونهٔ محصولی، اگر موجود است: [لینک اسکرین یا تصویر مرجع]
+لینک کیت مستندات و محل ساخت تصویر: [اگر قبلاً مشخص نشده است]
+زبان تصویر: فارسی
+```
+
+The writer inspects the component, settles missing setup, and asks only about relevant unknowns. The visual skill starts from an actual Figma kit template, preserves native component styling, and checks exported images. An omitted optional product example does not block a standalone component illustration. Placement claims still require evidence for the relevant screen or container bounds.
+
+The kit supports Anatomy, Variants, States, Rule Comparison, Responsive Comparison, Truncation, Behavior, and Product Example. Positioning & Padding uses an existing kit scaffold with explicit gap bands; it is a procedure, not an additional template variant.
 
 To assemble the final package:
 
@@ -70,7 +102,7 @@ If an image is unavailable, the assembler delivers the text and a separate missi
 
 The [kit specification](shared/visual-kit-spec.md) defines editable documentation templates at 960 logical px wide, with FA and EN layouts. It controls annotations and framing, while product components retain their native appearance.
 
-An [editable Figma kit](https://www.figma.com/design/vuz0Ey8cw38miujLZ3kP1d/Untitled?node-id=3-2) is available subject to the file's sharing permissions. Set `visualKit.pageUrl` to your project's copy. If the link is unavailable, the visual skill can build the templates from the specification in your chosen editable file; working Figma tools are still required. Font files are not bundled.
+An [editable Figma kit](https://www.figma.com/design/vuz0Ey8cw38miujLZ3kP1d/Component-Documentation-Kit?node-id=3-2) is available subject to the file's sharing permissions. Set `visualKit.pageUrl` to your project's copy. The visual skill must instantiate the actual kit template before composing a figure. If the kit is inaccessible, provide an accessible copy or link; it will not silently recreate the template. Creating a new kit is a separate, explicitly requested setup task. Font files are not bundled.
 
 ## Output
 
@@ -82,7 +114,9 @@ Visual-only delivery uses one section per component containing image embeds. Ful
 
 ## Validation status
 
-Local evaluations cover skill selection, a four-turn interview, bilingual writing, missing-source handling, and Markdown assembly. Repeated runs exposed a Persian opacity wording issue; the writing guide now distinguishes opacity from transparency, and a fresh bilingual regression run passed. Live Figma creation, export, and post-export geometry verification remain unverified in this evaluation environment.
+Local evaluations cover skill selection, a four-turn interview, bilingual writing, missing-source handling, and Markdown assembly. Explicit low-effort runs on GPT-6 Astra, Sol, and Luna exposed identifier errors, leading to more precise instructions and a Python identifier checker. Sol passed three writing runs after the first fix; Astra passed two writing regression runs. Luna passed only one of its final two writing runs on the same instructions, so reliable low-effort writing with Luna is not established. These are small synthetic tests across successive revisions, not a model benchmark.
+
+All 21 portable tests passed. The identifier checker validates the supplied inventory; it cannot detect source facts omitted from that inventory. Live low-effort Luna and Sol runs also produced Anatomy, Variants, and Responsive figures. Independent image and geometry review found callout defects in both models and black dimension labels in Luna’s responsive output. Those findings informed the current rules; these latest instruction changes have not yet been rerun live. See the detailed evaluation scope below.
 
 See [testing and limitations](docs/testing.md) for scope and commands. Package checks are not proof of visual correctness or publication rights.
 

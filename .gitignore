@@ -8,3 +8,6 @@ eval-artifacts/
 __pycache__/
 *.py[cod]
 .venv/
+
+.work/
+skill-evaluations/
