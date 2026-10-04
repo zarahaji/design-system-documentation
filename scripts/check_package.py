@@ -2,6 +2,7 @@
 """Check a skill-set directory before public distribution (standard library only)."""
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -40,6 +41,16 @@ def check(root: Path, forbidden: list[str], release: bool = False) -> list[str]:
     files = package_files(root)
     if not files:
         return ["Package contains no files"]
+    reviewed = {}
+    manifest = root / "assets/reviewed-images.json"
+    if manifest.is_file() and not manifest.is_symlink():
+        try:
+            reviewed = json.loads(manifest.read_text(encoding="utf-8"))
+            if not isinstance(reviewed, dict) or not all(isinstance(k, str) and isinstance(v, str) for k, v in reviewed.items()):
+                errors.append("Invalid reviewed-image manifest")
+                reviewed = {}
+        except (ValueError, OSError):
+            errors.append("Invalid reviewed-image manifest")
     for path in files:
         relative = path.relative_to(root)
         if path.is_symlink():
@@ -48,7 +59,19 @@ def check(root: Path, forbidden: list[str], release: bool = False) -> list[str]:
         try:
             content = path.read_text(encoding="utf-8")
         except (UnicodeError, OSError):
-            errors.append(f"Binary or unreadable file requires manual review: {relative}")
+            # Only exact, manually inspected PNG bytes can bypass text scanning.
+            try:
+                data = path.read_bytes()
+            except OSError:
+                data = b""
+            digest = reviewed.get(relative.as_posix())
+            if not (relative.parts[0] == "assets" and path.suffix.lower() == ".png"
+                    and data.startswith(b"\x89PNG\r\n\x1a\n")
+                    and digest == hashlib.sha256(data).hexdigest()):
+                errors.append(f"Binary or unreadable file requires manual review: {relative}")
+            for term in forbidden:
+                if term.casefold() in relative.as_posix().casefold():
+                    errors.append(f"Forbidden term found in {relative}: {term}")
             continue
         for term in forbidden:
             if term.casefold() in f"{relative}\n{content}".casefold():

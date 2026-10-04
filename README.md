@@ -4,6 +4,14 @@ Research, write, illustrate, and assemble design-system component documentation 
 
 ![Eight component documentation visual families](assets/kit-overview.svg)
 
+## Real-world example
+
+A Cafe Bazaar dialog guideline, shown with Persian documentation above and English documentation below. The comparison communicates one rule: a close icon does not replace an explicit Cancel action.
+
+![Cafe Bazaar dialog guideline in Persian and English: the incorrect example has only Delete and a close icon; the correct example also provides Cancel.](assets/examples/bazaar-dialog-fa-en.png)
+
+The native Persian product UI is preserved in both versions; documentation headings and captions are localized. This is a real documentation example, not a neutral kit template. The image is included for demonstration; Cafe Bazaar product designs are not reusable assets under this repository’s MIT license.
+
 ## What is included
 
 | Skill | What it does |
@@ -122,4 +130,4 @@ See [testing and limitations](docs/testing.md) for scope and commands. Package c
 
 ## Contributing and license
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for maintenance and release checks. Instructions and repository assets are distributed under the [MIT license](LICENSE). Linked Figma files, fonts, and user-supplied product assets require their own permission review.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for maintenance and release checks. Instructions and neutral kit assets are distributed under the [MIT license](LICENSE). The Cafe Bazaar example image is excluded from that license. Linked Figma files, fonts, and user-supplied product assets require their own permission review.

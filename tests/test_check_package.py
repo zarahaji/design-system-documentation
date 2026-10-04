@@ -1,4 +1,6 @@
 """Portable regression tests for the repository checker; no model or network calls."""
+import hashlib
+import json
 import importlib.util
 import tempfile
 import unittest
@@ -33,6 +35,25 @@ class PackageChecks(unittest.TestCase):
 
     def assert_rejected(self, message, terms=()):
         self.assertTrue(any(message in error for error in self.errors(terms)), self.errors(terms))
+
+    def test_reviewed_image_requires_exact_bytes(self):
+        image = self.root / "assets/example.png"
+        data = b"\x89PNG\r\n\x1a\nreviewed fixture"
+        image.write_bytes(data)
+        self.write("assets/reviewed-images.json", json.dumps({
+            "assets/example.png": hashlib.sha256(data).hexdigest()
+        }))
+        self.assertEqual([], self.errors())
+        image.write_bytes(data + b"changed")
+        self.assert_rejected("requires manual review")
+
+    def test_reviewed_image_path_still_scanned(self):
+        data = b"\x89PNG\r\n\x1a\nfixture"
+        (self.root / "assets/private-name.png").write_bytes(data)
+        self.write("assets/reviewed-images.json", json.dumps({
+            "assets/private-name.png": hashlib.sha256(data).hexdigest()
+        }))
+        self.assert_rejected("Forbidden term", ["private-name"])
 
     def test_clean_package(self):
         self.assertEqual([], self.errors())
