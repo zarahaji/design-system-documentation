@@ -2,7 +2,7 @@
 
 For ordinary figures, instantiate the existing Figma kit first; do not rebuild this specification as a substitute for access. The following kit-creation instructions apply only when the user explicitly requests kit creation or setup.
 
-The visual kit is a new page in a user-selected Figma design file. The page must be independently shareable under the file's permissions. Name the page and component set `Component Documentation Kit`. Create reusable editable templates for `Anatomy`, `Variants`, `States`, `Rule Comparison`, `Responsive Comparison`, `Truncation`, `Behavior`, and `Product Example`. Use `Template` and `Locale` (`FA`, `EN`) as the only kit variant axes where variants are practical. A team's own component instances are supplied at use time. Never include a source component, asset, token, or style from another project in the shared kit.
+The visual kit is a new page in a user-selected Figma design file. The page must be independently shareable under the file's permissions. Name the page and component set `Component Documentation Kit`. Create reusable editable templates for `Anatomy`, `Variants`, `States`, `Rule Comparison`, `Responsive Comparison`, `Truncation`, `Behavior`, `Product Example`, and `Positioning & Padding`. Use `Template` and `Locale` (`FA`, `EN`) as the only kit variant axes where variants are practical. A team's own component instances are supplied at use time. Never include a source component, asset, token, or style from another project in the shared kit.
 
 Generated visual frames use English names in the form `<Component name> - <documentation type>`; for example, `FAB Menu - Anatomy`. Nested documentation frames add a descriptive role after the type. Do not rename layers inside source component instances.
 
@@ -12,6 +12,7 @@ Generated visual frames use English names in the form `<Component name> - <docum
 | Variants | One stage, repeatable specimen slots with names below | Actual variant axes, values, and example configurations |
 | States | One stage, repeatable specimen slots with names below | Actual state values for the relevant configuration |
 | Rule Comparison | Two stages, verdict headings, one caption per stage | A confirmed rule and one controlled correct/incorrect difference |
+| Positioning & Padding | Explicit container boundary, specimen slot, requested red gap bands and full-opacity measurement labels | Confirmed container bounds, requested sides, and placement rule |
 | Responsive Comparison | Two stages, captions, optional spacing or dimension guides | Confirmed conditions and changed behavior |
 | Truncation | Two stages showing short and genuinely truncated content | Confirmed available width and truncation behavior |
 | Behavior | One stage with ordered steps and short arrows, outside caption | Confirmed event and result; timing only if known |
@@ -37,6 +38,6 @@ Generated visual frames use English names in the form `<Component name> - <docum
 
 These defaults are for documentation chrome. Inspect current Figma geometry and user edits before placing annotations. After export, perform a separate fresh Figma read to compare annotated bounds with the pre-export snapshot. If geometry moved, repair the generated annotation and export again. Check the actual image at intended display width.
 
-The kit page should contain a short usage note, eight template families in FA and EN, a specimen placeholder in each, and a small neutral component example made only for demonstrating the kit. It must not claim any example behavior as the user's product policy. Share the Figma file or duplicate link according to the user's chosen access settings; a page URL alone inherits its parent file's permissions.
+The kit page should contain a short usage note, nine template families in FA and EN, a specimen placeholder in each, and a small neutral component example made only for demonstrating the kit. It must not claim any example behavior as the user's product policy. Share the Figma file or duplicate link according to the user's chosen access settings; a page URL alone inherits its parent file's permissions.
 
 For the step-by-step build order, family-specific checks, and export verification procedure, read [build and verify](../component-doc-visuals/references/build-and-verify.md).

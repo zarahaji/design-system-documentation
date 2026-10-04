@@ -2,7 +2,7 @@
 
 Research, write, illustrate, and assemble design-system component documentation with three Codex skills. Persian-first, with optional English output and editable Figma visuals.
 
-![Eight component documentation visual families](assets/kit-overview.svg)
+![Nine component documentation visual families](assets/kit-overview.svg)
 
 ## Real-world example
 
@@ -95,7 +95,7 @@ Language: Persian
 
 The writer inspects the component, settles missing setup, and asks only about relevant unknowns. The visual skill starts from an actual Figma kit template, preserves native component styling, and checks exported images. An omitted optional product example does not block a standalone component illustration. Placement claims still require evidence for the relevant screen or container bounds.
 
-The kit supports Anatomy, Variants, States, Rule Comparison, Responsive Comparison, Truncation, Behavior, and Product Example. Positioning & Padding uses an existing kit scaffold with explicit gap bands; it is a procedure, not an additional template variant.
+The kit supports Anatomy, Variants, States, Rule Comparison, Responsive Comparison, Truncation, Behavior, and Product Example. [Positioning & Padding in Figma](https://www.figma.com/design/vuz0Ey8cw38miujLZ3kP1d/Component-Documentation-Kit?node-id=85-2) is a dedicated ninth template family, available in FA and EN, for component-to-container spacing. Use its red gap bands only for positioning and padding; use Responsive Comparison for width or behavior changes.
 
 To assemble the final package:
 

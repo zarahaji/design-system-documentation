@@ -1,6 +1,6 @@
 # Positioning & Padding
 
-Read when the supplied paragraph or product example teaches a component's placement or padding relative to screen/container edges. This is a procedure using an existing kit scaffold, not a new `Template` axis value.
+Read when the supplied paragraph or product example teaches a component's placement or padding relative to screen/container edges. Use the dedicated `Template=Positioning & Padding` variant with the requested `Locale=FA` or `Locale=EN`. This ninth family is separate from Responsive Comparison.
 
 ## Choose the measurement
 
@@ -11,7 +11,7 @@ Read when the supplied paragraph or product example teaches a component's placem
 ## Build in order
 
 1. Inspect the live native component and the supplied screen/container evidence. Record the intended reference edge: viewport, content area, safe area, or another explicitly named boundary. Never treat the gray documentation stage as a product screen. Ask for missing boundary evidence rather than inventing padding or breakpoints.
-2. Instantiate the actual kit template and locale, normally `Responsive Comparison` for paired examples or another existing family appropriate to the claim. Record the template and instance IDs. Adapt only the generated documentation wrapper, preserving native instances and masters. Name the output `<Component name> - Positioning & Padding`.
+2. Instantiate `Template=Positioning & Padding` with the requested locale from the actual Figma kit. The template includes horizontal-only and four-side demonstrations. Keep only the example and sides required by the claim; the demo’s 48 px values are not product rules. If this variant is missing in an older project copy, request an updated kit rather than silently routing to Responsive Comparison. Record the template and instance IDs. Adapt only the generated documentation wrapper, preserving native instances and masters. Name the output `<Component name> - Positioning & Padding`.
 3. Record which sides the paragraph requests: left, right, top, bottom, or an explicit combination. Convert logical start/end to physical sides using the actual UI direction. Do not automatically shade all four sides.
 4. Set the supported native configuration and let layout/reflow settle. Read the component and confirmed container bounds in the same logical coordinate system. Measurements describe actual displayed geometry, not old master coordinates.
 5. Calculate the rectangles below. Create a separate editable `FRAME` per requested positive gap. Use the kit's annotation-red fill with effective opacity exactly `0.12`, no stroke, and no native-component restyling. For example, use frame opacity `1` and fill opacity `0.12`. Keep any numeric label as a separate sibling with full-opacity annotation-red text. Do not put it beneath a translucent ancestor.

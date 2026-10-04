@@ -11,7 +11,7 @@ Read after selecting a confirmed claim and before planning live geometry or writ
 | State appearance | States | Actual states for the chosen configuration | Invented triggers or focus behavior |
 | One correct/incorrect distinction | Rule Comparison | A confirmed rule and one controlled difference | Multiple differences that obscure the lesson |
 | What changes under a condition | Responsive Comparison | Confirmed condition and behavior | Invented breakpoints from static widths |
-| Gaps to screen/container edges | Positioning & Padding using an existing kit scaffold | Confirmed container bounds, requested sides, and placement rule | Width-only comparison with decorative gap bands |
+| Gaps to screen/container edges | Positioning & Padding | Confirmed container bounds, requested sides, and placement rule | Width-only comparison with decorative gap bands |
 | Where and how content shortens | Truncation | Confirmed text behavior and available width | Manually typed ellipsis as proof of truncation |
 | Event followed by a result | Behavior | Confirmed event and resulting state | Timing or gestures inferred from state names |
 | Placement in a real product | Product Example | Authorized context and confirmed placement | A screenshot passed off as editable reconstruction |

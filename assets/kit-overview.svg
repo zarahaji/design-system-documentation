@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1248" viewBox="0 0 1200 1248" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1560" viewBox="0 0 1200 1560" role="img" aria-labelledby="title desc">
   <title id="title">Neutral component documentation visual kit overview</title>
-  <desc id="desc">Eight editable visual template families shown with neutral placeholder components.</desc>
-  <rect width="1200" height="1248" fill="#FFFFFF" />
+  <desc id="desc">Nine editable visual template families shown with neutral placeholder components.</desc>
+  <rect width="1200" height="1560" fill="#FFFFFF" />
   <text x="40" y="52" fill="#202124" font-family="Noto Sans, sans-serif" font-size="28" font-weight="700">Component Documentation Kit</text>
-  <text x="40" y="82" fill="#667085" font-family="Noto Sans, sans-serif" font-size="15">Neutral blueprint · 8 families · source components replace placeholders</text>
+  <text x="40" y="82" fill="#667085" font-family="Noto Sans, sans-serif" font-size="15">Neutral blueprint · 9 families · source components replace placeholders</text>
   <g font-family="Noto Sans, sans-serif">
     <g transform="translate(40 112)">
       <rect width="540" height="256" rx="12" fill="#FFFFFF" stroke="#D0D5DD" />
@@ -110,6 +110,19 @@
         <rect x="253" y="133" width="78" height="9" rx="4" fill="#D0D5DD" />
       </g>
       <text x="24" y="223" fill="#667085" font-size="13" dominant-baseline="text-before-edge">Authorized product context and placement</text>
+    </g>
+    <g transform="translate(40 1264)">
+      <rect width="540" height="256" rx="12" fill="#FFFFFF" stroke="#D0D5DD" />
+      <text x="24" y="27" fill="#202124" font-size="18" font-weight="700" dominant-baseline="text-before-edge">Positioning &amp; Padding</text>
+      <rect x="24" y="47" width="492" height="135" rx="8" fill="#F3F4F6" />
+      <rect x="110" y="61" width="320" height="108" fill="#FFFFFF" stroke="#D0D5DD" />
+      <rect x="166" y="85" width="208" height="60" rx="8" fill="#FFFFFF" stroke="#98A2B3" />
+      <g fill="#D92D20" opacity="0.12">
+        <rect x="110" y="85" width="56" height="60"/><rect x="374" y="85" width="56" height="60"/>
+        <rect x="166" y="61" width="208" height="24"/><rect x="166" y="145" width="208" height="24"/>
+      </g>
+      <g fill="#D92D20" font-size="12" text-anchor="middle"><text x="138" y="120">56 px</text><text x="402" y="120">56 px</text><text x="270" y="78">24 px</text><text x="270" y="162">24 px</text></g>
+      <text x="24" y="223" fill="#667085" font-size="13" dominant-baseline="text-before-edge">Measured spacing to the requested container edges</text>
     </g>
   </g>
 </svg>
